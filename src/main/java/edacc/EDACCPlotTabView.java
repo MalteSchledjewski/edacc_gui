@@ -774,13 +774,6 @@ public class EDACCPlotTabView extends javax.swing.JFrame {
                     }
                 };
                 dragWindow.setSize(new Dimension(width, height));
-                try {
-                    try {
-                        com.sun.awt.AWTUtilities.setWindowOpacity(dragWindow, 0.8f);
-                    } catch (NoClassDefFoundError er) {
-                    }
-                } catch (Exception ex) {
-                }
                 dragWindow.setVisible(true);
             }
             if (dragWindow != null) {

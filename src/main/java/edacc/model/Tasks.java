@@ -35,6 +35,7 @@ public class Tasks extends org.jdesktop.application.Task<Void, Void> {
      * @param view The corresponding view which implements EDACCTaskEvents to have control over this task.
      * @deprecated use <code>startTask(TaskRunnable runnable, boolean withTaskView)</code> instead
      */
+    @Deprecated
     public static void startTask(String methodName, Class[] signature, Object[] parameters, Object target, TaskEvents view, boolean withTaskView) {
         if (withTaskView && taskView != null) {
             return;
@@ -79,6 +80,7 @@ public class Tasks extends org.jdesktop.application.Task<Void, Void> {
      * @param view
      * @deprecated use <code>startTask(TaskRunnable runnable)</code> instead
      */
+    @Deprecated
     public static void startTask(String methodName, Class[] signature, Object[] parameters, Object target, TaskEvents view) {
         startTask(methodName, signature, parameters, target, view, true);
     }

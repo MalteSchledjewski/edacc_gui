@@ -14,6 +14,11 @@ plugins {
     application
 }
 
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+}
+
 repositories {
     // Use jcenter for resolving dependencies.
     // You can declare any Maven/Ivy/file repository here.
@@ -47,6 +52,10 @@ dependencies {
     implementation (group = "", name = "REngine")
     implementation (group = "", name = "JRI")
     implementation (group = "", name = "JRIEngine")
+    implementation (group = "com.sun.xml.bind", name = "jaxb-impl",version = "2.3.0")
+    implementation (group = "com.sun.xml.bind", name = "jaxb-core",version = "2.3.0")
+    implementation("javax.xml.bind:jaxb-api:2.3.0")
+    implementation("com.sun.activation:javax.activation:1.2.0")
     implementation (group = "org.jbundle.util.jcalendarbutton", name = "org.jbundle.util.jcalendarbutton", version = "1.6.4")
     // Use JUnit test framework
     testImplementation("junit:junit:4.12")
